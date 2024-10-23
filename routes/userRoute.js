@@ -1,0 +1,10 @@
+import express from 'express'
+import {loginUser,registerUser} from '../controllers/useController.js'
+
+const userRouter = express.Router()
+
+userRouter.post("/register",registerUser)
+userRouter.post("/login",loginUser)
+// app.use("/api/user",userRouter)
+
+export default userRouter;
